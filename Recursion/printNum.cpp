@@ -18,7 +18,7 @@ void f(int arr[]){
 int main() {
    int n=10;
    int arr[3] = {1,2,3};
-   f(arr+1);
+  // f(arr+1); // just for practices
    printNum(n);
 
     return 0;
