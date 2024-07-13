@@ -2,7 +2,7 @@
 using namespace std;
 
 // Using Monotonic Stack (Decresing Order)
-void NGR(int arr[], int n)
+void NSR(int arr[], int n)
 {
     vector<int> ans(n, -1);
     stack<int> st;
@@ -10,7 +10,7 @@ void NGR(int arr[], int n)
 
     for (int i = n - 2; i >= 0; i--)
     {
-        while (!st.empty() && st.top() <= arr[i])
+        while (!st.empty() && st.top() >= arr[i])
         {
             st.pop();
         }
@@ -32,7 +32,7 @@ int main()
     {
         cin >> arr[i];
     }
-    NGR(arr, n);
+    NSR(arr, n);
 
     return 0;
 }
