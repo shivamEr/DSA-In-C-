@@ -11,7 +11,7 @@ public:
         s.push(0);
         for (int i = 1; i < n; i++)
         {
-            while (s.size() && price[s.top()] <= price[i])
+            while (!s.empty() && price[s.top()] <= price[i])
             {
                 s.pop();
             }
