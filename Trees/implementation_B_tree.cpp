@@ -30,17 +30,38 @@ node *BulidTree(){
     return root;
 
 }
-
-void print(node *root){
+// PreOrder Traversal
+void preOrder(node *root){
     if(!root) return;
     
     cout<<root->data<<" ";
-    print(root->left);
-    print(root->right);
+    preOrder(root->left);
+    preOrder(root->right);
+}
+
+// InOrder Traversal
+void inOrder(node *root){
+    if(!root) return;
+    
+    cout<<root->data<<" ";
+    inOrder(root->left);
+    inOrder(root->right);
+}
+// postOrder Traversal
+void postOrder(node *root){
+    if(!root) return;
+    
+    cout<<root->data<<" ";
+    postOrder(root->left);
+    postOrder(root->right);
 }
 int main(){
     node *root = BulidTree();
-    print(root);
+    preOrder(root);
+    cout<<endl;
+    inOrder(root);
+    cout<<endl;
+    postOrder(root);
     return 0;
 }
 
